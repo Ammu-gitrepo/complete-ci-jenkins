@@ -6,15 +6,16 @@ pipeline{
     }
 
     environment {
-        NEXUS_VERSION = "nexus3"
-        NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "172.31.22.141:8081"
-        NEXUS_REPOSITORY = "vprofile-release"
-	    NEXUS_REPOGRP_ID    = "vprofile-group-repo"
-        NEXUS_CREDENTIAL_ID = "nexuslogin"
-        ARTVERSION = "${env.BUILD_ID}"
+        SNAP_REPO = 'vprofile-release-snapshot'
+		NEXUS_USER = 'admin'
+		NEXUS_PASS = 'Ammu@1996'
+		RELEASE_REPO = 'vprofile-release'
+		CENTRAL_REPO = 'vprofile-dependency-release'
+		NEXUSIP = '172.31.22.141'
+		NEXUSPORT = '8081'
+		NEXUS_GRP_REPO = 'vprofile-group-repo'
+        NEXUS_LOGIN = 'nexuslogin'
     }
-	
     stages{
         stage('Build'){
             steps{
