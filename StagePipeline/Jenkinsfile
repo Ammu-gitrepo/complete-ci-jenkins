@@ -5,11 +5,7 @@ def COLOR_MAP = [
 
 pipeline{
     agent any
-    tools{
-        maven 'MAVEN3'
-        jdk 'OracleJDK8'
-    }
-
+    
     environment {
         SNAP_REPO = 'vprofile-release-snapshot'
 		NEXUS_USER = 'admin'
