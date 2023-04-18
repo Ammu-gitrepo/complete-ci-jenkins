@@ -11,14 +11,14 @@ pipeline{
     }
 
     environment {
-        SNAP_REPO = 'vprofile-release-snapshot'
+        SNAP_REPO = 'vprofile-snapshot'
 		NEXUS_USER = 'admin'
 		NEXUS_PASS = 'Ammu@1996'
 		RELEASE_REPO = 'vprofile-release'
-		CENTRAL_REPO = 'vprofile-dependency-release'
-		NEXUSIP = '172.31.22.141'
+		CENTRAL_REPO = 'vpro-maven-central'
+		NEXUSIP = '172.31.30.126'
 		NEXUSPORT = '8081'
-		NEXUS_GRP_REPO = 'vprofile-group-repo'
+		NEXUS_GRP_REPO = 'vpro-maven-group'
         NEXUS_LOGIN = 'nexuslogin'
         SONARSCANNER = 'sonarscanner'
         SONARSERVER = 'sonarserver'
