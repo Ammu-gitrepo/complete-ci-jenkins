@@ -51,7 +51,7 @@
         msg: "{{unarchive_info.files[0].split('/')[0]}}"
 
     - name: Synchronize /tmp/tomcat8/tomcat_cont /usr/local/tomcat8.
-      synchronize:
+      ansible.posix.synchronize:
         src: "/tmp/tomcat8/{{unarchive_info.files[0].split('/')[0]}}/"
         dest: /usr/local/tomcat8/
       delegate_to: "{{ inventory_hostname }}"
